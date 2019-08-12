@@ -1,0 +1,17 @@
+///////Time Constants///////////
+$extracttime = 200ns //60ns
+$offtime = 60 ns//100ns
+$pregatetime = 60 ns
+$postgatetime = 60 ns
+///////Pulse Groups/////////////
+$Prep = 0n 0 + 1
+$off = 0x000000
+$Extract = 0n 2 + 3
+$gate = 0n 3
+////////////////////////////////
+
+alt:	$off, $offtime
+	$gate, $pregatetime
+	$Extract, $extracttime
+	$gate, $postgatetime
+	$off, 300 ns, branch, alt
