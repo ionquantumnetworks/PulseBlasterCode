@@ -1,6 +1,6 @@
 ///////Time Constants///////////
-$extracttime = 200ns //60ns
-$offtime = 60 ns//100ns
+$extracttime = 200ns
+$offtime = 60 ns
 $pregatetime = 60 ns
 $postgatetime = 60 ns
 ///////Pulse Groups/////////////
@@ -9,9 +9,11 @@ $off = 0x000000
 $Extract = 0n 2 + 3
 $gate = 0n 3
 ////////////////////////////////
-
+//program must run for >1 us but have completed the extract and gating in <1 us
 alt:	$off, $offtime
+	$wait
+	$off, $offtime
 	$gate, $pregatetime
 	$Extract, $extracttime
 	$gate, $postgatetime
-	$off, 300 ns, branch, alt
+	$off, 650 ns, branch, alt
