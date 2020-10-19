@@ -17,7 +17,7 @@ $GatePMT = On 4
 $GateBoth = On 3 + 4
 ////////////////////////////////
 start:	$Off, $offtime
-	$Cooling, $cooltime
+	$Cooling, $cooltime, wait
 	$Off, $offtime
 	$Prep, $pretime
 	$Off, $offtime
