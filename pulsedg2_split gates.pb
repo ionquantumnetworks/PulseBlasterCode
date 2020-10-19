@@ -22,6 +22,7 @@ start:	$Off, $offtime
 	$Prep, $pretime
 	$Off, $offtime
 	$Extract, $extracttime
+	//$GateBoth, $gatetime
 	$GateAPD, $gatetime
 	$GatePMT, $gatetime, branch, start //Branch returns us to start
 	
