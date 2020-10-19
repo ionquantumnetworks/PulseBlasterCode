@@ -19,7 +19,7 @@ $GateBoth = On 3 + 4
 start:	$Off, $offtime
 	$Cooling, $cooltime, wait
 	$Off, $offtime
-	$Prep, $pretime
+	$Prep, $preptime
 	$Off, $offtime
 	$Extract, $extracttime
 	//$GateBoth, $gatetime
